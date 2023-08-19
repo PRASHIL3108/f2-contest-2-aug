@@ -4,60 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
   <body>
-    <div class="form">
+    <header>
       <h1>Student Management CRUD</h1>
-      <form class="student-form">
-        <input id="name" type="text" placeholder="Name" required/>
-        <input id="email" type="email" placeholder="Email" required/>
-        <input id="gpa" type="number" placeholder="GPA" min="0" required/>
-        <input id="age" type="number" placeholder="Age" min="1" required/>
-        <input id="degree" type="text" placeholder="Degree" required/>
-      </form>
-      <button id="btn">Add Student</button>
-    </div>
-
-    <div class="searchbar">
-      <form>
+    </header>
+    <section class="inputs">
+        <form>
+        <section>
+        <div class="inputElements">
+          <input required type="text" placeholder="Name" class="inputBox" id="name"/>
+          <input required type="email" placeholder="Email" class="inputBox" id="email"/>
+          <input required type="text" placeholder="GPA" class="inputBox" id="gpa" />
+          <input required type="number" placeholder="Age" class="inputBox" id="age" />
+          <input required type="text" placeholder="Degree" class="inputBox" id="degree" />
+        </div>
+        </section>
+        <section>
+            <button type="submit" class="addButton add">Add Student</button>
+            <button type="submit" class="addButton edit" onclick="saveEdit()">Edit Student</button>
+        </section>
+        </form>
+      
+    </section>
+    <main>
+      <section class="searchSection">
         <input
-          id="search"
+          class="searchBar inputBox"
           type="text"
           placeholder="Search By Name, email or degree"
-          autocomplete="off"
-          autocomplete="new-password"
         />
-      </form>
-    </div>
-
-    <div class="table">
-      <table class="studenttable">
-        <thead>
-          <td>ID</td>
-          <td>Student Name</td>
-          <td>Email</td>
-          <td>Age</td>
-          <td>GPA</td>
-          <td>Degree</td>
-        </thead>
-        <tbody>
+      </section>
+      <section class="table">
+        <table>
           <tr>
-            <!-- <td>1</td>
-                        <td> Alice</td>
-                        <td>alice@gmail.com</td>
-                        <td>21</td>
-                        <td>9</td>
-                        <td>btech</td> -->
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>GPA</th>
+            <th>Degree</th>
           </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <script src="script.js"></script>
+        </table>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
